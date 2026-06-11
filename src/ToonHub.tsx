@@ -96,10 +96,13 @@ export default function ToonHub() {
 
         {/* Ghost text */}
         <div style={{ position: 'absolute', left: 0, right: 0, top: '18%', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', userSelect: 'none', zIndex: 2 }}>
-          <span style={{ fontFamily: "'Anton', sans-serif", fontSize: 'clamp(90px, 28vw, 380px)', fontWeight: 900, color: 'white', lineHeight: 1, textTransform: 'uppercase', letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
+          <span style={{ fontFamily: "'Anton', sans-serif", fontSize: 'clamp(90px, 28vw, 380px)', fontWeight: 900, color: 'white', opacity: 0.12, lineHeight: 1, textTransform: 'uppercase', letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
             FIGURA 3D
           </span>
         </div>
+
+        {/* Bottom gradient for text legibility */}
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '45%', background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%)', pointerEvents: 'none', zIndex: 58 }} />
 
         {/* Top-left brand */}
         <div style={{ position: 'absolute', top: 24, left: isMobile ? 16 : 32, zIndex: 60 }}>
@@ -160,17 +163,17 @@ export default function ToonHub() {
 
         {/* Bottom-left UI */}
         <div style={{ position: 'absolute', bottom: isMobile ? 24 : 72, left: isMobile ? 16 : 96, zIndex: 60, maxWidth: 320 }}>
-          <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', color: 'white', opacity: 0.55, letterSpacing: '0.22em', margin: '0 0 6px' }}>
+          <p style={{ fontSize: 10, fontWeight: 600, textTransform: 'uppercase', color: 'white', opacity: 0.75, letterSpacing: '0.22em', margin: '0 0 6px', textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}>
             COLECCIÓN EXCLUSIVA
           </p>
-          <p style={{ fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.02em', margin: '0 0 4px', fontSize: isMobile ? 16 : 22, color: 'white', opacity: 0.95 }}>
+          <p style={{ fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.02em', margin: '0 0 4px', fontSize: isMobile ? 16 : 22, color: 'white', opacity: 1, textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
             FIGURAS TOONHUB
           </p>
-          <p key={`n-${activeIndex}`} style={{ fontSize: isMobile ? 12 : 14, color: 'white', opacity: 0.65, letterSpacing: '0.14em', textTransform: 'uppercase', margin: `0 0 ${isMobile ? 12 : 10}px`, animation: 'slide-up-in 420ms ease-out both' }}>
+          <p key={`n-${activeIndex}`} style={{ fontSize: isMobile ? 12 : 14, color: 'white', opacity: 0.85, letterSpacing: '0.14em', textTransform: 'uppercase', margin: `0 0 ${isMobile ? 12 : 10}px`, animation: 'slide-up-in 420ms ease-out both', textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}>
             {cur.nombre} · {cur.edicion}
           </p>
           {!isMobile && (
-            <p style={{ fontSize: 13, color: 'white', opacity: 0.78, lineHeight: 1.65, margin: '0 0 20px' }}>
+            <p style={{ fontSize: 13, color: 'white', opacity: 0.9, lineHeight: 1.65, margin: '0 0 20px', textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}>
               Obra maestra impresa en 3D, lista para exhibir. El acabado es impecable y la calidad artesanal inigualable. ¡Pídela ahora!
             </p>
           )}
